@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body data-bs-no-jquery>
+    <div class="container" id="main_container">
+        <div class="row text-center">
+            <h1 class="display-4">Добро пожаловать!</h1>
+            <p class="lead mb-0">Это финансовый калькулятор для работы с большими числами</p>
+            <hr class="my-4">
+            <p>Вы можете выполнять арифмитические действия через наш сайт</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="first_number">Первое число</span>
+                    <input type="text" class="form-control" aria-describedby="first_number" id="first_number_input">
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="second_number">Второе число</span>
+                    <input type="text" class="form-control" aria-describedby="second_number" id="second_number_input">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="operation" id="addition" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="addition">Сложение</label>
+
+                    <input type="radio" class="btn-check" name="operation" id="subtraction" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="subtraction">Вычитание</label>
+
+                    <!-- будет в будущей версии
+                    <input type="radio" class="btn-check" name="operation" id="multiplication" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="multiplication">Умножение</label>
+
+                    <input type="radio" class="btn-check" name="operation" id="division" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="division">Деление</label>
+                    -->
+                </div>
+            </div>
+        </div>
+        <!-- Результат вычисления -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="result">Результат</span>
+                    <input type="text" class="form-control" aria-describedby="result" id="result_input" readonly>
+                </div>
+                <div class="alert alert-danger" role="alert" id="error_message" style="display: none;">
+                    Введите корректные данные
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/js-big-decimal@1.3.1/dist/web/js-big-decimal.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
